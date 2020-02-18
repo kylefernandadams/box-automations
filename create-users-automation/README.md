@@ -1,18 +1,18 @@
 # Create Users Automation
-The Create Users Automations is an example script to help provision users leveraging a service account and app users.
+The Create Users Automation contains an example script to help provision users at scale leveraging a service account and app users.
 
 ## Scale Boundaries
-This script is designed to help mitigate issues when deploy users at scale in Box and adheres to the following scale boundaries:
-* Items per owner (several million): Distributes ownership across multiple App Users
-* Child items per folder (15k items): Distributes personal folders across a sub-folder owned by App Users
+This script is designed to help Box adhere to the following scale boundaries:
+* Items per owner (several million): Distributes ownership across multiple App Users.
+* Child items per folder (15k items): Distributes personal folders across a sub-folder owned by App Users.
 * Collaborations received by a user (5k collaborations):
-  * Leverage a Service Account that is dedicated to user provisioning
-  * Personal folders should not be created at the root of the Service Account or App User.
+  * Leverage a Service Account that is dedicated to user provisioning.
+  * Personal folders are not created at the root of the Service Account or App User.
 
 ## Pre-Requisites
 1. Ensure you've completed pre-requisites in the [parent project documentation](../README.md)
 2. Install the latest version of [dotnet core.](https://dotnet.microsoft.com/download)
-3. Create a Metadata Template in the [Box Admin Console]() with the name `Item Details` and one text attribute called `Item Total`
+3. Create a Metadata Template in the [Box Admin Console](https://app.box.com/master/metadata/templates) with the name `Item Details` and one text attribute called `Item Total`
 4. Create or leverage an existing employee metadata template.
 5. Update the [Employee MD Template Key](/create-users-automation.ps1#L21) and corresponding variables.
 > Note: You can retrieve the MD template key and attribute keys by using the box metadata-templates BoxCLI command....
