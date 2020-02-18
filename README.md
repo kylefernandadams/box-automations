@@ -3,6 +3,7 @@ Box Automations are example scripts to help reduce manual overhead for repetitiv
 
 ## Examples
 1. DRAFT - [create-users-automation](/create-users-automation): PowerShell scripts to help automate user provisioning at scale.
+   ** TODO - Wrap in PowerShell RunSpacePool multi-thread calls and increase throughput.
 
 ## Pre-Requisites
 
