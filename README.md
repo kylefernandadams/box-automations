@@ -1,5 +1,5 @@
-# Box Automations
-Box Automations are example scripts to help reduce manual overhead for repetitive tasks. These examples are designed to be used for demonstration, development, and test purposes.
+# Box PowerShell Automations
+Box PowerShell Automations are example scripts to help reduce manual overhead for repetitive tasks. These examples are designed to be used for demonstration, development, and test purposes.
 
 ## Examples
 1. DRAFT - [create-users-automation](/create-users-automation): PowerShell scripts to help automate user provisioning at scale.
