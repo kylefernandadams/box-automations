@@ -14,15 +14,11 @@ When creating a closed folder structure in Box, a service account or admin accou
 3. Set the [ItemName](/trash-search-automation/trash-search-automation.ps1#L5) variable.
 4. Set the [CreatedByLogin](/trash-search-automation/trash-search-automation.ps1#L8) variable.
 5. Set the [RestoreFile](/trash-search-automation/trash-search-automation.ps1#L11) variable to `$true` or `$false` depending on if you would like to restore the files and move them to a target parent folder.
-    * If [RestoreFile](/trash-search-automation/trash-search-automation.ps1#L11) is set to `$true`, manually create a new Folder using the BoxCLI.
-
+   * If [RestoreFile](/trash-search-automation/trash-search-automation.ps1#L11) is set to `$true`, manually create a new Folder using the BoxCLI.
+   * If [RestoreFile](/trash-search-automation/trash-search-automation.ps1#L11) is set to `$true`, set the [RestoreParentFolderId](/trash-search-automation/trash-search-automation.ps1#L12) id to the folder id that was just created.
 ```
 box folders:create 0 eDiscoFolder-123
-
 ```
-
-    * If [RestoreFile](/trash-search-automation/trash-search-automation.ps1#L11) is set to `$true`, set the [RestoreParentFolderId](/trash-search-automation/trash-search-automation.ps1#L12) id to the folder id that was just created.
-
 6. Set the [CsvReportPath](/trash-search-automation/trash-search-automation.ps1#L15) variable to the local directory in which to create the CSV report.
 7. Uncomment [Search-Trashed-Items-By-FileName](/trash-search-automation/trash-search-automation.ps1#L24) to enable the search by file name example.
 8. Uncomment [Search-Trashed-Items-By-FileName-And-CreatedBy](/trash-search-automation/trash-search-automation.ps1#L29) to enable the search by file name and created by login example.
