@@ -11,10 +11,9 @@ This script is designed to help Box adhere to the following scale boundaries:
 
 ## Pre-Requisites
 1. Ensure you've completed pre-requisites in the [parent project documentation](../README.md)
-2. Install the latest version of [dotnet core.](https://dotnet.microsoft.com/download)
-3. Create a Metadata Template in the [Box Admin Console](https://app.box.com/master/metadata/templates) with the name `Item Details` and one text attribute called `Item Total`
-4. Create or leverage an existing employee metadata template.
-5. Update the [Employee MD Template Key](/create-users-automation.ps1#L21) and corresponding variables.
+2. Create a Metadata Template in the [Box Admin Console](https://app.box.com/master/metadata/templates) with the name `Item Details` and one text attribute called `Item Total`
+3. Create or leverage an existing employee metadata template.
+4. Update the [Employee MD Template Key](/create-users-automation.ps1#L21) and corresponding variables.
 > Note: You can retrieve the MD template key and attribute keys by using the box metadata-templates BoxCLI command....
 
 ```
@@ -61,10 +60,10 @@ kadams@mbp Developer % box metadata-templates
     }
 ```
 
-6. Update the [Add-Personal-Folder Function](/create-users-automation.ps1#L81) to reflect the metadata template created in the previous step.
-7. When using mock data with the [Add-Folders-From-Mock-Employee-Data](/create-users-automation.ps1#L58) function, be sure to comment out the [add collaborator command.](/create-users-automation.ps1#L105) The emails are fake and will not work.
-8. When adding real users, uncomment the [add collaborator command.](/create-users-automation.ps1#L105)
-9. Create your own implementation to retrieve a list of users to create whether it be from existing users in Box, an LDAP query, or API calls to your IdP.
+5. Update the [Add-Personal-Folder Function](/create-users-automation.ps1#L81) to reflect the metadata template created in the previous step.
+6. When using mock data with the [Add-Folders-From-Mock-Employee-Data](/create-users-automation.ps1#L58) function, be sure to comment out the [add collaborator command.](/create-users-automation.ps1#L105) The emails are fake and will not work.
+7. When adding real users, uncomment the [add collaborator command.](/create-users-automation.ps1#L105)
+8. Create your own implementation to retrieve a list of users to create whether it be from existing users in Box, an LDAP query, or API calls to your IdP.
 
 ## Mock Employee Data
 * Generate 10 Employees: [employees_10.json](/employees_10.json)

@@ -3,8 +3,10 @@ Box PowerShell Automations are example scripts to help reduce manual overhead fo
 
 ## Examples
 1. DRAFT - [create-users-automation](/create-users-automation): PowerShell scripts to help automate user provisioning at scale.
-   
+
    * TODO - Wrap in PowerShell RunSpacePool to enable multi-threading and to increase throughput.
+
+2. [trash-search-automation](/trash-search-automation): PowerShell scripts to help automate finding content in a service account or admin's trash.
 
 ## Pre-Requisites
 
